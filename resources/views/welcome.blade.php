@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Recipes
+                    Mel's Recipes
                 </div>
 
                 <div class="links">
