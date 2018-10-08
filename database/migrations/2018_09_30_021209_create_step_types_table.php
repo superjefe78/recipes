@@ -4,18 +4,18 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePresentationTypeTable extends Migration
+class CreateStepTypesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * like a prep step vs cooking etc
      * @return void
      */
     public function up()
     {
-        Schema::create('presentation_type', function (Blueprint $table) {
+        Schema::create('step_type', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('presentation_text');
+            $table->string('step_type_text');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreatePresentationTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('presentation_type');
+        Schema::dropIfExists('step_type');
     }
 }

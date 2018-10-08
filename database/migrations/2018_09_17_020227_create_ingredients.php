@@ -46,7 +46,7 @@ class CreateIngredients extends Migration
 
             $table->boolean('allergen')->nullable();
             $table->string('allergen_type')->nullable();
-            $table->boolean('tags')->nullable();
+            $table->string('tags')->nullable();
             $table->string('comments')->nullable();
             $table->integer('image')->unsigned()->nullable();            
             $table->timestamps();

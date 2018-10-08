@@ -17,7 +17,7 @@ class CreateIngredientPurchaseHistoryTable extends Migration
             $table->increments('id');
             $table->integer('ingredient_id');
             $table->integer('store')->unsigned()->nullable();
-            $table->double('paid_price',6,2)->nullable();
+            $table->decimal('paid_price',6,2)->nullable();
             $table->string('brand')->nullable();
             $table->dateTime('purchase_ts')->nullable();
             $table->integer('product_rating')->unsigned()->nullable();

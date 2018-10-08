@@ -20,10 +20,10 @@ class CreateStoreTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('zip');
-            $table->integer('likeability')->unsigned()->nullable();            
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
-
+            $table->integer('rating')->unsigned()->nullable();            
+            $table->integer('likes')->unsigned()->nullable();
+            $table->integer('dislikes')->unsigned()->nullable();
+            $table->integer('image_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

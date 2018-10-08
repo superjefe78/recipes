@@ -23,7 +23,7 @@ class CreateCookingUtensilsTable extends Migration
             $table->integer('dislikes')->nullable();
             $table->boolean('tags')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
+            $table->integer('image_id')->unsigned()->nullable();            
 
             $table->timestamps();
         });

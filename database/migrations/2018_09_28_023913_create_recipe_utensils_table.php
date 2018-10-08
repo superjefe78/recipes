@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBrandTable extends Migration
+class CreateRecipeUtensilsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,18 @@ class CreateBrandTable extends Migration
      */
     public function up()
     {
-        Schema::create('brand', function (Blueprint $table) {
+        Schema::create('recipe_utensils', function (Blueprint $table) {
             $table->increments('id');
+            
             $table->string('name');
-            $table->integer('image_id')->nullable();
-
-            $table->integer('likeability')->unsigned()->nullable();            
+            $table->string('long_name')->nullable();
+            $table->integer('utensil_type')->unsigned();
+            $table->integer('likeability')->unsigned()->nullable();
             $table->integer('likes')->nullable();
             $table->integer('dislikes')->nullable();
+            $table->boolean('tags')->nullable();
+            $table->string('comments')->nullable();
+            $table->integer('image')->unsigned()->nullable();            
 
             $table->timestamps();
         });
@@ -33,6 +37,6 @@ class CreateBrandTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('brand');
+        Schema::dropIfExists('recipe_utensils');
     }
 }

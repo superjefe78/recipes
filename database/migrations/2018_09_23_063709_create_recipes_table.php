@@ -30,6 +30,7 @@ class CreateRecipesTable extends Migration
             $table->integer('preparation_time_unit_type')->unsigned()->nullable();
             $table->integer('cooking_time_units')->unsigned()->nullable();
             $table->integer('cooking_time_unit_type')->unsigned()->nullable();
+            $table->integer('difficulty_level')->unsigned()->nullable();
             $table->integer('recipe_life_units')->unsigned()->nullable();
             $table->integer('recipe_life_unit_type')->unsigned()->nullable();
 
@@ -47,7 +48,7 @@ class CreateRecipesTable extends Migration
 
             $table->boolean('allergen')->nullable();
             $table->string('allergen_type')->nullable();
-            $table->boolean('tags')->nullable();
+            $table->string('tags')->nullable();
             $table->string('comments')->nullable();
             $table->integer('image')->unsigned()->nullable();          
 

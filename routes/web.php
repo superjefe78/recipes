@@ -1,5 +1,6 @@
 <?php
-
+// use DB;
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,6 +52,15 @@ Route::get('swampy/{parameter1?}', function($parameter1){
 
 Route::get('goodtimes', function(){
     return view('badtimes');
+});
+
+Route::get('recipes', function(){
+//     $users = DB::select('select * from users where active = ?', [1]);
+     $recipes = DB::select('select * from ingredients where 1');
+
+        // return view('user.index', ['users' => $users]);
+    // return $recipes[0]->name;
+    return view('recipes', ['recipe1' => $recipes[0]->name]);
 });
 
 Route::get('/posts', 'PostsController@index');
