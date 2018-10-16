@@ -13,19 +13,18 @@ class CreatePantryInventoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pantry_inventories', function (Blueprint $table) {
+        Schema::create('pantry_inventory', function (Blueprint $table) {
             $table->increments('id');
-            
-            $table->string('name');
-            $table->string('long_name')->nullable();
-            $table->integer('utensil_type')->unsigned();
-            $table->integer('likeability')->unsigned()->nullable();
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
+            $table->integer('user_id');
+            $table->integer('pantry_id');
+            $table->integer('ingredient_id');
+            $table->integer('utensil_id');
+            $table->decimal('current_unit_count');
+            $table->integer('closest_expiration_date');
+            $table->boolean('nbr_items_expiring_next')->nullable();
+            $table->boolean('perishable')->nullable();
             $table->boolean('tags')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
-
             $table->timestamps();
         
         });
@@ -38,6 +37,6 @@ class CreatePantryInventoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pantry_inventories');
+        Schema::dropIfExists('pantry_inventory');
     }
 }

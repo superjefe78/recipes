@@ -15,18 +15,14 @@ class CreateShoppingListItemsTable extends Migration
     {
         Schema::create('shopping_list_items', function (Blueprint $table) {
             $table->increments('id');
-            
-            $table->string('name');
-            $table->string('long_name')->nullable();
-            $table->integer('utensil_type')->unsigned();
-            $table->integer('likeability')->unsigned()->nullable();
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
-            $table->boolean('tags')->nullable();
-            $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
-
-            $table->timestamps();
+            $table->integer('shopping_list_id')->unsigned();
+            $table->integer('list_item_type_id')->unsigned();
+            $table->integer('ingredient_id')->unsigned()->nullable();
+            $table->integer('utensil_id')->unsigned()->nullable();
+            $table->integer('recipe_id')->unsigned()->nullable();
+            $table->integer('pur_unit_type')->unsigned()->nullable();
+            $table->decimal('units_needed')->unsigned()->nullable();
+            $table->decimal('proportional_units_needed')->unsigned()->nullable();
         });
     }
 

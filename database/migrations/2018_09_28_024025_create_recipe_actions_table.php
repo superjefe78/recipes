@@ -18,7 +18,6 @@ class CreateRecipeActionsTable extends Migration
             
             $table->string('name');
             $table->string('long_name')->nullable();
-            $table->integer('utensil_type')->unsigned();
             $table->integer('likeability')->unsigned()->nullable();
             $table->integer('likes')->nullable();
             $table->integer('dislikes')->nullable();

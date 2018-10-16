@@ -15,18 +15,10 @@ class CreateShoppingListRecipesTable extends Migration
     {
         Schema::create('shopping_list_recipes', function (Blueprint $table) {
             $table->increments('id');
-            
-            $table->string('name');
-            $table->string('long_name')->nullable();
-            $table->integer('utensil_type')->unsigned();
-            $table->integer('likeability')->unsigned()->nullable();
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
-            $table->boolean('tags')->nullable();
-            $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
-
-            $table->timestamps();
+            $table->integer('shopping_list_id')->unsigned();
+            $table->integer('recipe_id')->unsigned()->nullable();
+            $table->decimal('regular_servings')->unsigned()->nullable();
+            $table->decimal('proportional_servings')->unsigned()->nullable();
         });
     }
 
