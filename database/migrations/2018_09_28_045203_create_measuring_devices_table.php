@@ -16,6 +16,7 @@ class CreateMeasuringDevicesTable extends Migration
         Schema::create('measuring_device', function (Blueprint $table) {
             $table->increments('id');
             $table->string('measuring_device_text');
+            $table->string('measuring_device_type_id');
             $table->timestamps();
         });
     }

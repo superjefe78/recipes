@@ -16,6 +16,9 @@ class CreatePurchasingUnitTypeTable extends Migration
         Schema::create('purchasing_unit_type', function (Blueprint $table) {
             $table->increments('id');
             $table->string('purchasing_unit_name');
+            $table->integer('likes')->nullable();
+            $table->integer('dislikes')->nullable();
+            $table->integer('image_id')->nullable();            
             $table->timestamps();
         });
     }

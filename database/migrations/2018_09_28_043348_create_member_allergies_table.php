@@ -15,15 +15,15 @@ class CreateMemberAllergiesTable extends Migration
     {
         Schema::create('member_allergies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('member_id');
-            $table->string('ingredient_id');
-            $table->string('allergy_intensity_id');
+            $table->integer('member_id');
+            $table->integer('ingredient_id');
+            $table->integer('allergy_intensity_id');
             $table->boolean('substitute_ok');
-            $table->string('sub_ingredient_id_1');
-            $table->string('sub_ingredient_id_2');
-            $table->string('sub_ingredient_id_3');
-            $table->string('sub_ingredient_id_4');
-            $table->string('sub_ingredient_id_5');
+            $table->integer('sub_ingredient_id_1');
+            $table->integer('sub_ingredient_id_2');
+            $table->integer('sub_ingredient_id_3');
+            $table->integer('sub_ingredient_id_4');
+            $table->integer('sub_ingredient_id_5');
             $table->timestamps();
         });
     }

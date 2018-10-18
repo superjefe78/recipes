@@ -16,7 +16,10 @@ class CreateIngredientTypeTable extends Migration
         Schema::create('ingredient_type', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->string('ing_type_text');
+            $table->string('ingredient_type_text');
+            $table->integer('likes')->nullable();
+            $table->integer('dislikes')->nullable();
+            $table->integer('image_id')->nullable();
             $table->timestamps();
         });
     }

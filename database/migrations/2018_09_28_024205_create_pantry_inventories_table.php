@@ -20,6 +20,7 @@ class CreatePantryInventoriesTable extends Migration
             $table->integer('item_type_id');
             $table->integer('ingredient_id');
             $table->integer('utensil_id');
+            $table->integer('brand_id')->nullable();            
             $table->integer('expiration_date');
             $table->decimal('unit_count');
             $table->boolean('perishable')->nullable();

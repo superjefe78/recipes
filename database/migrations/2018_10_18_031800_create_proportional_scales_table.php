@@ -15,9 +15,9 @@ class CreateProportionalScalesTable extends Migration
     {
         Schema::create('proportional_scales', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullable();
-            $table->decimal('original')->nullable();
-            $table->decimal('modified')->nullable();   
+            $table->string('name');
+            $table->decimal('original');
+            $table->decimal('modified');   
             $table->timestamps();
         });
     }

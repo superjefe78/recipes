@@ -20,9 +20,7 @@ class CreateUserHouseholdsTable extends Migration
             $table->string('long_name')->nullable();
             $table->integer('member_type_id');
             $table->integer('difficulty_level_id')->nullable();
-            $table->decimal('member_age_units')->nullable();
-            $table->integer('member_age_unit_type_id')->nullable();
-
+            $table->decimal('member_birth_year')->nullable();
             $table->boolean('allergic')->nullable();
             $table->string('tags')->nullable();
             $table->string('comments')->nullable();

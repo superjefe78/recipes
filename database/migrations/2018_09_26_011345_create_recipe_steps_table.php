@@ -27,6 +27,7 @@ class CreateRecipeStepsTable extends Migration
             $table->decimal('repeat_times')->nullable();
             $table->integer('step_nbr')->nullable();
             $table->integer('sub_step_nbr')->nullable();
+            $table->integer('sub_sub_step_nbr')->nullable();
             $table->integer('action_intensity_id')->nullable();
             $table->decimal('action_units')->nullable();
             $table->integer('action_unit_type_id')->nullable();

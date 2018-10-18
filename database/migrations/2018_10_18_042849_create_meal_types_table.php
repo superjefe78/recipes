@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSpicyLevelTable extends Migration
+class CreateMealTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateSpicyLevelTable extends Migration
      */
     public function up()
     {
-        Schema::create('spicy_level', function (Blueprint $table) {
+        Schema::create('meal_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('spicy_level_text');  
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
-            $table->integer('image_id')->nullable();                      
+            $table->string('name');
+            $table->string('long_name')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateSpicyLevelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spicy_level');
+        Schema::dropIfExists('meal_types');
     }
 }

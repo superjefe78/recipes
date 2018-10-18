@@ -17,7 +17,9 @@ class CreateRatingTable extends Migration
             $table->increments('id');
             $table->integer('rating_type_id');
             $table->string('rating_text');
-            $table->integer('rating_image_id')->nullable();
+            $table->integer('likes')->nullable();
+            $table->integer('dislikes')->nullable();
+            $table->integer('image_id')->nullable();
             $table->timestamps();
         });
     }

@@ -37,7 +37,7 @@ class CreateRecipesTable extends Migration
             $table->decimal('servings_per_recipe')->nullable();
             $table->decimal('people_fed_per_serving')->nullable();
 
-            $table->integer('cals_per_serving')->nullable();
+            $table->decimal('cals_per_serving')->nullable();
             $table->decimal('total_cals_per_recipe')->nullable();
 
             $table->boolean('perishable')->nullable();
@@ -45,7 +45,7 @@ class CreateRecipesTable extends Migration
             $table->date('expiration_date')->nullable();
 
             $table->boolean('allergen')->nullable();
-            $table->string('allergen_type_id')->nullable();
+            $table->integer('allergen_type_id')->nullable();
             $table->string('tags')->nullable();
             $table->string('comments')->nullable();
             $table->integer('image_id')->nullable();          
