@@ -16,13 +16,12 @@ class CreateImageTable extends Migration
         Schema::create('image', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('size');
-            $table->string('height');
-            $table->string('width');
-            $table->string('file_location');
-            $table->binary('image_file');
+            $table->string('size')->nullable();
+            $table->string('height')->nullable();
+            $table->string('width')->nullable();
+            $table->string('file_location')->nullable();
+            $table->binary('image_file')->nullable();
             $table->boolean('is_blob');
-            $table->boolean('is_remote');
             $table->timestamps();
         });
     }

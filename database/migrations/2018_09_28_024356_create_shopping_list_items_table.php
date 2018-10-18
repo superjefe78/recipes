@@ -15,14 +15,13 @@ class CreateShoppingListItemsTable extends Migration
     {
         Schema::create('shopping_list_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('shopping_list_id')->unsigned();
-            $table->integer('list_item_type_id')->unsigned();
-            $table->integer('ingredient_id')->unsigned()->nullable();
-            $table->integer('utensil_id')->unsigned()->nullable();
-            $table->integer('recipe_id')->unsigned()->nullable();
-            $table->integer('pur_unit_type')->unsigned()->nullable();
-            $table->decimal('units_needed')->unsigned()->nullable();
-            $table->decimal('proportional_units_needed')->unsigned()->nullable();
+            $table->integer('shopping_list_id');
+            $table->integer('recipe_id')->nullable();
+            $table->integer('item_type_id');
+            $table->integer('ingredient_id')->nullable();
+            $table->integer('utensil_id')->nullable();
+            $table->decimal('units_needed')->nullable();
+            $table->decimal('proportional_units_needed')->nullable();
         });
     }
 

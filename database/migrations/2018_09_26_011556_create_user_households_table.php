@@ -15,18 +15,18 @@ class CreateUserHouseholdsTable extends Migration
     {
         Schema::create('user_household_member', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id');
             $table->string('name');
             $table->string('long_name')->nullable();
-            $table->integer('member_type_id')->unsigned();
-            $table->integer('difficulty_level')->unsigned()->nullable();
-            $table->integer('member_age_units')->unsigned()->nullable();
-            $table->integer('member_age_unit_type')->unsigned()->nullable();
+            $table->integer('member_type_id');
+            $table->integer('difficulty_level_id')->nullable();
+            $table->decimal('member_age_units')->nullable();
+            $table->integer('member_age_unit_type_id')->nullable();
 
             $table->boolean('allergic')->nullable();
             $table->string('tags')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
+            $table->integer('image_id')->nullable();            
 
             $table->timestamps();
         

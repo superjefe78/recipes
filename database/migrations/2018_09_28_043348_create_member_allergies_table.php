@@ -17,11 +17,13 @@ class CreateMemberAllergiesTable extends Migration
             $table->increments('id');
             $table->string('member_id');
             $table->string('ingredient_id');
-            $table->string('allergy_intensity');
-            $table->boolean('substitude_ok');
+            $table->string('allergy_intensity_id');
+            $table->boolean('substitute_ok');
             $table->string('sub_ingredient_id_1');
             $table->string('sub_ingredient_id_2');
             $table->string('sub_ingredient_id_3');
+            $table->string('sub_ingredient_id_4');
+            $table->string('sub_ingredient_id_5');
             $table->timestamps();
         });
     }

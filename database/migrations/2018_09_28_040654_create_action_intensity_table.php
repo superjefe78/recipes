@@ -15,14 +15,10 @@ class CreateActionIntensityTable extends Migration
     {
         Schema::create('action_intensity', function (Blueprint $table) {
             $table->increments('id');
-            // $table->integer('action_intensity_id')->unsigned()->nullable();
             $table->string('action_intensity_text')->nullable();
-            $table->integer('action_id')->unsigned()->nullable();
-            $table->integer('action_type_id')->unsigned()->nullable();
-            $table->string('name')->nullable();
             $table->string('notes')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
+            $table->integer('image_id')->nullable();            
             
             $table->timestamps();
         });

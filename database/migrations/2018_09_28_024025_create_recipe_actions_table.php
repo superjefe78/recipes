@@ -18,12 +18,12 @@ class CreateRecipeActionsTable extends Migration
             
             $table->string('name');
             $table->string('long_name')->nullable();
-            $table->integer('likeability')->unsigned()->nullable();
+            $table->integer('likeability_id')->nullable();
             $table->integer('likes')->nullable();
             $table->integer('dislikes')->nullable();
-            $table->boolean('tags')->nullable();
+            $table->string('tags')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
+            $table->integer('image_id')->nullable();            
 
             $table->timestamps();
 

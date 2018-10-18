@@ -17,13 +17,15 @@ class CreateCookingUtensilsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('long_name')->nullable();
-            $table->integer('utensil_type')->unsigned();
-            $table->integer('likeability')->unsigned()->nullable();
+            $table->integer('utensil_type_id')->nullable();
+            $table->integer('presentation_type_id')->nullable();
+            $table->integer('purchasing_unit_type_id')->nullable();
+            $table->integer('likeability_id')->nullable();
             $table->integer('likes')->nullable();
             $table->integer('dislikes')->nullable();
-            $table->boolean('tags')->nullable();
+            $table->string('tags')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image_id')->unsigned()->nullable();            
+            $table->integer('image_id')->nullable();            
 
             $table->timestamps();
         });

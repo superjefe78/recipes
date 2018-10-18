@@ -13,9 +13,9 @@ class CreateCookingTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cooking_types', function (Blueprint $table) {
+        Schema::create('cooking_type', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cooking_types_text')->nullable();
+            $table->string('cooking_type_text')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateCookingTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cooking_types');
+        Schema::dropIfExists('cooking_type');
     }
 }

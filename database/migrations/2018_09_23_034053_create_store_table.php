@@ -16,14 +16,14 @@ class CreateStoreTable extends Migration
         Schema::create('store', function (Blueprint $table) {
             $table->increments('id');
             $table->string('store_name');
-            $table->string('address');
-            $table->string('city');
-            $table->string('state');
-            $table->string('zip');
-            $table->integer('rating')->unsigned()->nullable();            
-            $table->integer('likes')->unsigned()->nullable();
-            $table->integer('dislikes')->unsigned()->nullable();
-            $table->integer('image_id')->unsigned()->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('zip')->nullable();
+            $table->integer('rating')->nullable();            
+            $table->integer('likes')->nullable();
+            $table->integer('dislikes')->nullable();
+            $table->integer('image_id')->nullable();
             $table->timestamps();
         });
     }

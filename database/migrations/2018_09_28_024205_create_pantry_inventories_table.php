@@ -17,13 +17,14 @@ class CreatePantryInventoriesTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('pantry_id');
+            $table->integer('item_type_id');
             $table->integer('ingredient_id');
             $table->integer('utensil_id');
-            $table->decimal('current_unit_count');
-            $table->integer('closest_expiration_date');
-            $table->boolean('nbr_items_expiring_next')->nullable();
+            $table->integer('expiration_date');
+            $table->decimal('unit_count');
             $table->boolean('perishable')->nullable();
-            $table->boolean('tags')->nullable();
+            $table->boolean('expiring_soon')->nullable();
+            $table->string('tags')->nullable();
             $table->string('comments')->nullable();
             $table->timestamps();
         

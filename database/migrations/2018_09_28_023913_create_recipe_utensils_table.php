@@ -14,18 +14,15 @@ class CreateRecipeUtensilsTable extends Migration
     public function up()
     {
         Schema::create('recipe_utensils', function (Blueprint $table) {
-            $table->increments('id');
-            
-            $table->string('name');
-            $table->string('long_name')->nullable();
-            $table->integer('utensil_type')->unsigned();
-            $table->integer('likeability')->unsigned()->nullable();
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
-            $table->boolean('tags')->nullable();
+            $table->increments('id');           
+            $table->integer('recipe_id')->nullable();            
+            $table->integer('utensil_id');
+            $table->decimal('units_needed')->nullable();
+            $table->integer('proportial_scale_id')->nullable();
+            $table->string('tags')->nullable();
+            $table->string('notes')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
-
+            $table->integer('image_id')->nullable();   
             $table->timestamps();
         });
     }

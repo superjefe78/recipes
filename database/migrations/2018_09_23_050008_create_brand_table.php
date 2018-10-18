@@ -18,7 +18,7 @@ class CreateBrandTable extends Migration
             $table->string('name');
             $table->integer('image_id')->nullable();
 
-            $table->integer('likeability')->unsigned()->nullable();            
+            $table->integer('likeability_id')->nullable();            
             $table->integer('likes')->nullable();
             $table->integer('dislikes')->nullable();
 

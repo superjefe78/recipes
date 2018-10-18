@@ -16,15 +16,15 @@ class CreateIngredientPurchaseHistoryTable extends Migration
         Schema::create('ingredient_purchase_history', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('ingredient_id');
-            $table->integer('store')->unsigned()->nullable();
+            $table->integer('store_id')->nullable();
             $table->decimal('paid_price',6,2)->nullable();
-            $table->string('brand')->nullable();
-            $table->dateTime('purchase_ts')->nullable();
-            $table->integer('product_rating')->unsigned()->nullable();
-            $table->integer('store_rating')->unsigned()->nullable();
-            $table->integer('brand_rating')->unsigned()->nullable();
-            $table->integer('price_rating')->unsigned()->nullable();
-            $table->string('prefered_purchase_brand')->nullable();
+            $table->string('brand_id');
+            $table->dateTime('purchase_ts');
+            $table->integer('product_rating_id')->nullable();
+            $table->integer('store_rating_id')->nullable();
+            $table->integer('brand_rating_id')->nullable();
+            $table->integer('price_rating_id')->nullable();
+            $table->string('prefered_purchase_brand_id')->nullable();
             $table->dateTime('prefered_purchase_ts')->nullable();
             
             $table->timestamps();

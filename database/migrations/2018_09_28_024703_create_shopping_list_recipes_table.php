@@ -15,10 +15,10 @@ class CreateShoppingListRecipesTable extends Migration
     {
         Schema::create('shopping_list_recipes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('shopping_list_id')->unsigned();
-            $table->integer('recipe_id')->unsigned()->nullable();
-            $table->decimal('regular_servings')->unsigned()->nullable();
-            $table->decimal('proportional_servings')->unsigned()->nullable();
+            $table->integer('shopping_list_id');
+            $table->integer('recipe_id')->nullable();
+            $table->decimal('regular_servings')->nullable();
+            $table->decimal('proportional_servings')->nullable();
         });
     }
 

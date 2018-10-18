@@ -17,22 +17,22 @@ class CreateIngredients extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('long_name')->nullable();
-            $table->integer('ingredient_type')->unsigned();
-            $table->integer('presentation_type')->unsigned()->nullable();
+            $table->integer('ingredient_type_id')->nullable();
 
-            $table->integer('spicy_level')->unsigned()->nullable();
-            $table->integer('likeability')->unsigned()->nullable();
+            $table->integer('presentation_type_id')->nullable();
+            $table->integer('purchasing_unit_type_id')->nullable();
+
+            $table->integer('spicy_level')->nullable();
+            $table->integer('likeability_id')->nullable();
             $table->integer('likes')->nullable();
             $table->integer('dislikes')->nullable();
 
-            $table->integer('purchasing_unit_type')->unsigned()->nullable();
-
-            $table->integer('last_purchase_store')->unsigned()->nullable();
+            $table->integer('last_purchase_store')->nullable();
             $table->double('last_purchase_paid_price',6,2)->nullable();
             $table->string('last_purchase_brand')->nullable();
             $table->dateTime('last_purchase_ts')->nullable();
 
-            $table->integer('prefered_purchase_store')->unsigned()->nullable();
+            $table->integer('prefered_purchase_store')->nullable();
             $table->double('prefered_purchase_paid_price',6,2)->nullable();
             $table->string('prefered_purchase_brand')->nullable();
             $table->dateTime('prefered_purchase_ts')->nullable();
@@ -41,14 +41,14 @@ class CreateIngredients extends Migration
             $table->boolean('refrigerate')->nullable();
             $table->date('expiration_date')->nullable();
 
-            $table->integer('shelf_life_units')->unsigned()->nullable();
-            $table->integer('shelf_life_unit_type')->unsigned()->nullable();
+            $table->integer('shelf_life_units')->nullable();
+            $table->integer('shelf_life_unit_type')->nullable();
 
             $table->boolean('allergen')->nullable();
             $table->string('allergen_type')->nullable();
             $table->string('tags')->nullable();
             $table->string('comments')->nullable();
-            $table->integer('image')->unsigned()->nullable();            
+            $table->integer('image_id')->nullable();            
             $table->timestamps();
         });
     }

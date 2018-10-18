@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRatingTypesTable extends Migration
+class CreateProportionalScalesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateRatingTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('rating_type', function (Blueprint $table) {
+        Schema::create('proportional_scales', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('rating_type_text');
-            $table->integer('rating_image_id')->nullable();
+            $table->string('name')->nullable();
+            $table->decimal('original')->nullable();
+            $table->decimal('modified')->nullable();   
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateRatingTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rating_type');
+        Schema::dropIfExists('proportional_scales');
     }
 }
