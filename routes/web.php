@@ -1,6 +1,9 @@
 <?php
 // use DB;
 use Illuminate\Support\Facades\DB;
+use App\Ingredient;
+use App\Recipe;
+use App\ShoppingList;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,3 +71,20 @@ Route::get('/posts', 'PostsController@index');
 Route::get('/post/{post}', function () {
     return view('welcome');
 });
+Route::get('ingredientnames', 'IngredientController@names');
+Route::get('ingredientsall', 'IngredientController@index');
+
+Route::get('ingredientlist', function () {
+    $var1 = Ingredient::all();
+    return view('ingredients', ['var1' => $var1]);
+});
+Route::get('recipelist', function () {
+    $var1 = Recipe::all();
+    return view('recipes', ['var1' => $var1]);
+});
+Route::get('shoppinglist', function () {
+    $var1 = ShoppingList::all();
+    return view('shopping', ['var1' => $var1]);
+});
+
+

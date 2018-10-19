@@ -15,7 +15,7 @@
         <span ng-bind="name1"></span> 
         <hr>
         <p>@{{name1}}</p>
-        <p>{{$recipe1}}</p> 
+        <!-- <p>{{--$recipe1--}}</p>  -->
     </div>
     <div>
     <input type="text" ng-model="cityname"></span> 
@@ -28,7 +28,28 @@
       </li>
     </ul>
     </div>
-    
+    <div>
+    <a href="/ingredientlist" >Ingredients</a>
+    </div>
+    <div>
+    <a href="/recipelist"> Recipes</a>
+    </div>
+    <div>
+    <a href="/shoppinglist">Shopping List</a>
+    </div>
+           <div>
+        The recipes are:
+            <ul>
+            @foreach ($var1 as $item)
+            <li>
+                {{ $item->name }}
+            </li>
+            @endforeach
+
+               
+
+            </ul>
+        </div>
     <script>
 //     var myApp = angular.module('the-app',[]);
 

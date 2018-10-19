@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ShoppingList extends Model
+class Ingredient extends Model
 {
     protected $connection = 'mysql';
-    protected $table = 'shopping_lists';
+    protected $table = 'ingredients';
     
     // protected $fillable = ['title', 'body'];
     protected $guarded = [];
