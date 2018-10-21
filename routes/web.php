@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\DB;
 use App\Ingredient;
 use App\Recipe;
+use App\RecipeIngredient;
 use App\ShoppingList;
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +82,15 @@ Route::get('ingredientlist', function () {
 Route::get('recipelist', function () {
     $var1 = Recipe::all();
     return view('recipes', ['var1' => $var1]);
+});
+Route::get('recipeIngredients/{id}', function ($id) {
+    $var1 = Recipe::find($id);
+    $var2 = RecipeIngredient::where('recipe_id',$id)
+    ->join('ingredients','ingredients.id','recipe_ingredients.ingredient_id')
+    ->get();
+    // return $var1;
+    //return $var2;
+    return view('recipeIngredients', ['var1' => $var1,'var2' => $var2]);
 });
 Route::get('shoppinglist', function () {
     $var1 = ShoppingList::all();

@@ -38,11 +38,11 @@
     <a href="/shoppinglist">Shopping List</a>
     </div>
            <div>
-        The recipes are:
+        The Ingredient List for Recipes named {{$var1->name}} are:
             <ul>
-            @foreach ($var1 as $item)
+            @foreach ($var2 as $item)
             <li>
-                <a href="recipeIngredients/{{$item->id}}">{{ $item->name }}</a>
+                {{$item->name }}
             </li>
             @endforeach
 
