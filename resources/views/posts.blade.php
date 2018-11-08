@@ -2,7 +2,8 @@
 
 
 @section('content')
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+<!-- <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark"> -->
+      <div class="jumbotron2">
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
           <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
@@ -22,7 +23,8 @@
               <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               <a href="#">Continue reading</a>
             </div>
-            <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+            <img width="220px" src="images/burger1.jpg" class="card-img-right flex-auto d-none d-lg-block" alt="Card image cap">
+            <!-- <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap"> -->
           </div>
         </div>
         <div class="col-md-6">
@@ -36,7 +38,8 @@
               <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               <a href="#">Continue reading</a>
             </div>
-            <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+            <img height="100px" width="300px" src="images/food1.jpg" class="card-img-right flex-auto d-none d-lg-block" alt="Card image cap">
+            <!-- <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap"> -->
           </div>
         </div>
       </div>
@@ -120,8 +123,6 @@
     </main><!-- /.container -->
     @endsection
 
-    @include('partials.aside')
-
     @section('footer')
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -137,11 +138,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
+      // Holder.addTheme('thumb', {
+      //   bg: '#55595c',
+      //   fg: '#eceeef',
+      //   text: 'Thumbnail'
+      // });
     </script>
   </body>
 </html>

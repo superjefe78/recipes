@@ -4,7 +4,7 @@
         <title>Ingredients</title>
     </head>
     <body>
-            <p>{{$var1}}</p>
+            <!-- <p>{{-- $var1 --}}</p> -->
         <div>
         The ingredients are:
             <ul>

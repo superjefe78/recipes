@@ -5,6 +5,7 @@ use App\Ingredient;
 use App\Recipe;
 use App\RecipeIngredient;
 use App\ShoppingList;
+use Illuminate\Support\Facades\Log;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -88,9 +89,16 @@ Route::get('recipeIngredients/{id}', function ($id) {
     $var2 = RecipeIngredient::where('recipe_id',$id)
     ->join('ingredients','ingredients.id','recipe_ingredients.ingredient_id')
     ->get();
+    $var3 = Ingredient::all();
     // return $var1;
-    //return $var2;
-    return view('recipeIngredients', ['var1' => $var1,'var2' => $var2]);
+    // return $var2;
+    // return $var3;
+    return view('recipeIngredients', ['var1' => $var1,'var2' => $var2,'var3' => $var3]);
+});
+Route::get('addrecipeIngredients/{id}', function ($id) {
+$recipe = RecipeIngredient::where('recipe_id',9)->get();
+Log::info("Hello there".$id);
+return "hello";
 });
 Route::get('shoppinglist', function () {
     $var1 = ShoppingList::all();

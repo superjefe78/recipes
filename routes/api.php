@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Http\Request;
-Use App\Ingredient;
+use App\Ingredient;
+
+use App\Recipe;
+use App\RecipeIngredient;
+use App\ShoppingList;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +45,33 @@ Route::put('ingredients/{id}', function(Request $request, $id) {
 
 Route::delete('ingredients/{id}', function($id) {
     Ingredient::find($id)->delete();
+
+    return 204;
+});
+
+Route::get('recipeingredient', function() {
+    // If the Content-Type and Accept headers are set to 'application/json', 
+    // this will return a JSON structure. This will be cleaned up later.
+    return RecipeIngredient::all();
+});
+ 
+Route::get('recipeingredient/{id}', function($id) {
+    return RecipeIngredient::find($id);
+});
+
+Route::post('recipeingredient', function(Request $request) {
+    return RecipeIngredient::create($request->all);
+});
+
+Route::put('recipeingredient/{id}', function(Request $request, $id) {
+    $article = RecipeIngredient::findOrFail($id);
+    $article->update($request->all());
+
+    return $article;
+});
+
+Route::delete('recipeingredient/{id}', function($id) {
+    RecipeIngredient::find($id)->delete();
 
     return 204;
 });

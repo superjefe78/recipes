@@ -10,25 +10,6 @@
 </head>
 <body ng-app='the-app'  ng-controller='myctrl' ng-init="[name1='Bob', cities=[{id:'1',cityname:'LA'},{id:'2',cityname:'Chi'},{id:'3',cityname:'OTown'},{id:'4',cityname:'BENTONVILLE'},{id:'5',cityname:'centerton'},{id:'6',cityname:'NYC'}]]">
     <div>
-        <label>Name:</label>
-        <input type="text" ng-model="name1">
-        <span ng-bind="name1"></span> 
-        <hr>
-        <p>@{{name1}}</p>
-        <!-- <p>{{--$recipe1--}}</p>  -->
-    </div>
-    <div>
-    <input type="text" ng-model="cityname"></span> 
-    <input type="button" ng-click="sortBy='cityname';reverse=!reverse" value="Sort me">
-    <!--   limitTo:2 | -->
-    <ul>
-      <li ng-repeat="city in cities | filter: cityname | orderBy:sortBy:reverse">
-            @{{city.id | currency}} - @{{city.cityname | uppercase}}
-
-      </li>
-    </ul>
-    </div>
-    <div>
     <a href="/ingredientlist" >Ingredients</a>
     </div>
     <div>

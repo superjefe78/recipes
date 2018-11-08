@@ -14,10 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
-<!-- <link href="{{ asset('css/blog.css') }}" rel="stylesheet"> -->
-<!-- <link href="resources/assets/css/blog.css" rel="stylesheet"> -->
-    <link href="css/blog.css" rel="stylesheet">
+    <link href="../../css/blog.css" rel="stylesheet">
   </head>
 
   <body>
@@ -59,5 +56,8 @@
 
 <div class='container' 3s >
     @yield('content')
+</div>
+<div class='container'>
+    @yield('shoulder')
 </div>
 @yield('footer')
