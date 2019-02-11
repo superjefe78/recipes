@@ -5,7 +5,7 @@
 <div><span>id: </span>{{recipe.id}}</div>
 <div><span>name: </span>{{recipe.name}}</div>
 
-<table datatable class="row-border hover">
+<!-- <table datatable class="row-border hover">
   <thead>
     <tr>
       <th>ID</th>
@@ -75,4 +75,7 @@
       <td>Link</td>
     </tr>
   </tbody>
-</table>
+</table> -->
+
+
+<table datatable [dtOptions]="dtOptions" class="row-border hover"></table>

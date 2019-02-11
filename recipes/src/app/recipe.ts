@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 })
 
 export class Recipe {
+
     id: number;
     name: string;
 }
