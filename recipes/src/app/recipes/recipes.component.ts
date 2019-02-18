@@ -1,5 +1,4 @@
-import {
-  Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Recipe } from '../recipe';
 import { HttpClient } from '@angular/common/http';
 
@@ -24,30 +23,17 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit(): void {
 
-//     let stuff = this.http.get('http://localhost:8000/api/ingredients' )
-//     // .subscribe((data: Recipe) => this.recipe = {
-//     //     id: data['id'],
-//     //     name:  data['name']
-//     // });
-//     .subscribe(data => {
-// console.log(data);   });
-// //}; 
-    // debugger        
-
     this.dtOptions = {
-      // ajax: 'data/data.json',
-      ajax: 'http://localhost:8000/api/ingredients',
+      'ajax': {url:'http://localhost:8000/api/recipes',dataSrc: ""},
       columns: [
         {
         title: 'ID',
         data: 'id'
       }, {
-        title: 'Ingredient Name',
+        title: 'Recipe Name',
         data: 'name'
-      }, {
-          title: 'Long Name',
-        data: 'long_name'
-      }]
+      }
+    ]
     };
   }
 

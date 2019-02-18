@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use App\Ingredient;
-
 use App\Recipe;
+use App\CookingUtensils as Utensil;
 use App\RecipeIngredient;
 use App\ShoppingList;
 
@@ -26,6 +26,18 @@ Route::get('ingredients', function() {
     // If the Content-Type and Accept headers are set to 'application/json', 
     // this will return a JSON structure. This will be cleaned up later.
     return Ingredient::all();
+});
+
+Route::get('recipes', function() {
+    // If the Content-Type and Accept headers are set to 'application/json', 
+    // this will return a JSON structure. This will be cleaned up later.
+    return Recipe::all();
+});
+
+Route::get('utensils', function() {
+    // If the Content-Type and Accept headers are set to 'application/json', 
+    // this will return a JSON structure. This will be cleaned up later.
+    return Utensil::all();
 });
  
 Route::get('ingredients/{id}', function($id) {

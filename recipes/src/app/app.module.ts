@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { DataTablesModule } from 'angular-datatables';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { UtensilsComponent } from './utensils/utensils.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipesComponent
+    RecipesComponent,
+    IngredientsComponent,
+    UtensilsComponent
   ],
   imports: [
     BrowserModule,
