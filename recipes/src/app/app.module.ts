@@ -8,13 +8,19 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { DataTablesModule } from 'angular-datatables';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { UtensilsComponent } from './utensils/utensils.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipesComponent,
     IngredientsComponent,
-    UtensilsComponent
+    UtensilsComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
