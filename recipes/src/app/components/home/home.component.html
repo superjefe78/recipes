@@ -2,11 +2,13 @@
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
-        aria-selected="true">Ingredients</a>
+        aria-selected="true"><span class="text">Ingredients</span><span class="icon"><img class="iconx" src="assets/img/ingredients3.jpg" /></span></a>
       <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
-        aria-selected="false">Recipes</a>
+        aria-selected="false"><span class="text">Recipes</span><span class="icon"><img class="iconx" src="assets/img/book4.png" /></span></a>
       <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
-        aria-selected="false">Utensils</a>
+        aria-selected="false"><span class="text">Utensils</span><span class="icon"><img class="iconx" src="assets/img/utensils3.png" /></span></a>
+      <a class="nav-item nav-link" id="nav-shoppinglist-tab" data-toggle="tab" href="#nav-shoppinglist" role="tab" aria-controls="nav-shoppinglist"
+        aria-selected="false"><span class="text">Shopping List</span><span class="icon"><img class="iconx" src="assets/img/list2.png" /></span></a>
     </div>
   </nav>
   <br>
@@ -19,5 +21,8 @@
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
       <app-utensils></app-utensils>
+    </div>
+    <div class="tab-pane fade" id="nav-shoppinglist" role="tabpanel" aria-labelledby="nav-shoppinglist-tab">
+      <app-shoppinglist></app-shoppinglist>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { Recipe } from '../recipe';
+import { Recipe } from '../../recipe';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
