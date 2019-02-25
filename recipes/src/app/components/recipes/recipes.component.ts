@@ -26,14 +26,20 @@ export class RecipesComponent implements OnInit {
     this.dtOptions = {
       'ajax': {url:'http://localhost:8000/api/recipes',dataSrc: ""},
       columns: [
-        {
+      {
         title: 'ID',
         data: 'id'
       }, {
         title: 'Recipe Name',
         data: 'name'
+      }, {
+        title: 'Recipe action',
+        data: 'long_name',
+        render: function (data, type, row, meta)
+        { return '<button>'+ row.name +'</button>'}
       }
     ]
+      ,  dom: 'Bfrtip'
     };
   }
 
