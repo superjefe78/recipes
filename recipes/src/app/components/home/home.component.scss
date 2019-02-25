@@ -1,11 +1,11 @@
-  @media (min-width: 641px) {
+  @media (min-width: 451px) {
   span.icon {display:none}
   span.text {display:inline-block}
   }
   
-  @media (max-width: 640px) {
+  @media (max-width: 450px) {
   span.icon {display:inline-block}
   span.text {display:none}
   }
 
-  .iconx {height:70px;width:auto;}
+  .iconx {height:50px;width:auto;}
