@@ -25,7 +25,18 @@ export class UtensilsComponent implements OnInit {
         }, {
           title: 'Utensil Name',
           data: 'name'
-        }
+        },
+        { title: 'long_name', data: 'long_name' },
+        { title: 'utensil_type_id', data:'utensil_type_id'},
+        { title: 'presentation_type_id', data:'presentation_type_id'},
+        { title: 'purchasing_unit_type_id', data:'purchasing_unit_type_id'},
+        { title: 'likeability_id', data:'likeability_id'},
+        { title: 'likes', data:'likes'},
+        { title: 'dislikes', data:'dislikes'},
+        { title: 'tags', data:'tags'},
+        { title: 'tags', data: 'tags' },
+        { title: 'comments', data: 'comments' },
+        { title: 'image_id', data: 'image_id' },
       ]
     };
 

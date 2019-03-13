@@ -11,4 +11,9 @@ class Ingredient extends Model
     
     // protected $fillable = ['title', 'body'];
     protected $guarded = [];
+
+    public function ingredientType()
+    {
+        return $this->hasOne('ingredients');
+    }
 }

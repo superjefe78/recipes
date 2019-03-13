@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RecipeType extends Model
+class IngredientTypes extends Model
 {
     protected $connection = 'mysql';
-    protected $table = 'recipe_types';
+    protected $table = 'ingredient_type';
     
     // protected $fillable = ['title', 'body'];
     protected $guarded = [];
-        
-    public function recipes()
+
+    public function ingredients()
     {
-        return $this->hasMany('App\Recipe','id', 'recipe_type_id');
+        return $this->belongsTo('ingredients');
     }
 }
