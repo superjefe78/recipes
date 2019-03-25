@@ -16,6 +16,7 @@ class CreateDifficultyLevel extends Migration
         Schema::create('difficulty_level', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('long_name');
             $table->timestamps();
         });
     }
