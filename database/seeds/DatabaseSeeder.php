@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
     {
 
         Log::info('before');
-        // $this->call(AllergenTypeTableSeeder::class);
-        // $this->call(DifficultyLevelTableSeeder::class);
+        $this->call(AllergenTypeTableSeeder::class);
+        $this->call(DifficultyLevelTableSeeder::class);
         $this->call(LikeabilityTableSeeder::class);
         $this->call(MealTypeTableSeeder::class);
         $this->call(RecipeTypesTableSeeder::class);

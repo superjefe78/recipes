@@ -15,9 +15,8 @@ class CreateSpicyLevelTable extends Migration
     {
         Schema::create('spicy_level', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('spicy_level_text');  
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
+            $table->string('name');  
+            $table->string('long_name');  
             $table->integer('image_id')->nullable();                      
             $table->timestamps();
         });
