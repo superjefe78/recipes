@@ -50,8 +50,8 @@ export class RecipesComponent implements OnInit {
         render: function (data, type, row, meta)
         { return '<button (click)="nnn()">' + row.name +'-'+ row.id +'</button>'}
       }, 
-      { title: 'recipe_type_id', data: 'recipe_type_id' },
-      { title: 'meal_type_id', data: 'meal_type_id' },
+      { title: 'Recipe Type', data: 'recipe_type.name' },
+      { title: 'Meal Type', data: 'meal_type.name' },
       { title: 'seasonal', data: 'seasonal' },
       { title: 'season_id', data: 'season_id' },
       { title: 'spicy_level_id', data: 'spicy_level_id' },

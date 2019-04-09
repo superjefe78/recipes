@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Recipe;
 
 class RecipesController extends Controller
 {
@@ -13,7 +14,10 @@ class RecipesController extends Controller
         return View('Recipes');
         // return Recipe::all()->pluck('name');
     }
- 
+    public function allRecipes()
+    {
+        return Recipe::with('recipeType')->with('mealType')->get();
+    }
     public function index()
     {
         return Recipe::all();
