@@ -19,14 +19,14 @@ class Recipe extends Model
     {
         return $this->belongsTo('App\Season','season_id','id');
     }
-    public function allergenType()
-    {
-        return $this->belongsTo('App\AllergenType','allergen_type_id','id');
-    }
     public function cookingTimeUnitType()
     {
-        return $this->belongsTo('App\CookingTimeUnitType','cooking_time_unit_type_id','id');
+        return $this->belongsTo('App\TimeUnitType','cooking_time_unit_type_id','id');
     }
+    // public function cookingTimeUnitType()
+    // {
+    //     return $this->belongsTo('App\CookingTimeUnitType','cooking_time_unit_type_id','id');
+    // }
     public function difficultyLevel()
     {
         return $this->belongsTo('App\DifficultyLevel','difficulty_level_id','id');
@@ -45,11 +45,11 @@ class Recipe extends Model
     }
     public function preparationTimeUnitType()
     {
-        return $this->belongsTo('App\PreparationTimeUnitType','preparation_time_unit_type_id','id');
+        return $this->belongsTo('App\TimeUnitType','preparation_time_unit_type_id','id');
     }
-    public function recipeLifeUnitsType()
+    public function recipeLifeUnitType()
     {
-        return $this->belongsTo('App\RecipeLifeUnitsType','recipe_life_units_id','id');
+        return $this->belongsTo('App\TimeUnitType','recipe_life_unit_type_id','id');
     }
     public function spicyLevel()
     {

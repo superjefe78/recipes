@@ -16,7 +16,16 @@ class RecipesController extends Controller
     }
     public function allRecipes()
     {
-        return Recipe::with('recipeType')->with('mealType')->get();
+        return Recipe::with('recipeType')
+        ->with('mealType')
+        ->with('season')
+        ->with('spicyLevel')
+        ->with('likeability')
+        ->with('cookingTimeUnitType')
+        ->with('preparationTimeUnitType')
+        ->with('difficultyLevel')
+        ->with('recipeLifeUnitType')
+        ->get();
     }
     public function index()
     {

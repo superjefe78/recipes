@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SeasonTableSeeder::class);
         $this->call(SpicyLevelTableSeeder::class);
         $this->call(UsersTableSeeder::class);
+        $this->call(TimeUnitTypeTableSeeder::class);
         Log::info('after');
     }
 }

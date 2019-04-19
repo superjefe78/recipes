@@ -13,8 +13,8 @@ class AllergenType extends Model
     // protected $fillable = ['title', 'body'];
     protected $guarded = [];
         
-    public function recipes()
-    {
-        return $this->hasMany('App\Recipe','id', 'allergen_type_id');
-    }
+    // public function ingredients()
+    // {
+    //     return $this->hasMany('App\Ingredients','id', 'allergen_type_id');
+    // }
 }

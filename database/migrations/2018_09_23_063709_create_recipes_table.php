@@ -45,7 +45,6 @@ class CreateRecipesTable extends Migration
             $table->date('expiration_date')->nullable();
 
             $table->boolean('allergen')->nullable();
-            $table->integer('allergen_type_id')->nullable();
             $table->string('tags')->nullable();
             $table->string('comments')->nullable();
             $table->integer('image_id')->nullable();          

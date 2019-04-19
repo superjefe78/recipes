@@ -52,30 +52,62 @@ export class RecipesComponent implements OnInit {
       }, 
       { title: 'Recipe Type', data: 'recipe_type.name' },
       { title: 'Meal Type', data: 'meal_type.name' },
-      { title: 'seasonal', data: 'seasonal' },
-      { title: 'season_id', data: 'season_id' },
-      { title: 'spicy_level_id', data: 'spicy_level_id' },
-      { title: 'likeability_id', data: 'likeability_id' },
-      { title: 'likes', data: 'likes' },
-      { title: 'dislikes', data: 'dislikes' },
-      { title: 'preparation_time_units', data: 'preparation_time_units' },
-      { title: 'preparation_time_unit_type_id', data: 'preparation_time_unit_type_id' },
-      { title: 'cooking_time_units', data: 'cooking_time_units' },
-      { title: 'cooking_time_unit_type_id', data: 'cooking_time_unit_type_id' },
-      { title: 'difficulty_level_id', data: 'difficulty_level_id' },
-      { title: 'recipe_life_units', data: 'recipe_life_units' },
-      { title: 'recipe_life_unit_type_id', data: 'recipe_life_unit_type_id' },
-      { title: 'servings_per_recipe', data: 'servings_per_recipe' },
-      { title: 'people_fed_per_serving', data: 'people_fed_per_serving' },
-      { title: 'cals_per_serving', data: 'cals_per_serving' },
-      { title: 'total_cals_per_recipe', data: 'total_cals_per_recipe' },
-      { title: 'perishable', data: 'perishable' },
-      { title: 'refrigerate', data: 'refrigerate' },
-      { title: 'expiration_date', data: 'expiration_date' },
-      { title: 'allergen', data: 'allergen' },
-      { title: 'allergen_type_id', data: 'allergen_type_id' },
-      { title: 'tags', data: 'tags' },
-      { title: 'comments', data: 'comments' },
+      // { title: 'seasonal', data: 'seasonal' },
+      { title: 'Season', data: 'season.name' },
+      { title: 'Spicyness Level', data: 'spicy_level.name' },
+      { title: 'Likeability', data: 'likeability.name' },
+      { title: 'Likes', data: 'likes' },
+      { title: 'Dislikes', data: 'dislikes' },
+      { title: 'Preparation Time', render: function (data, type, row, meta) 
+        {
+            if (row.preparation_time_units == null || row.preparation_time_unit_type == undefined || row.preparation_time_unit_type == null
+              || row.preparation_time_unit_type.time_unit_text == undefined || row.preparation_time_unit_type.time_unit_text == null) {
+              return 'Invalid';
+            }
+            else {
+              return row.preparation_time_units + ' ' + row.preparation_time_unit_type.time_unit_text
+            }
+          }
+        },
+      // { title: 'preparation_time_units', data: 'preparation_time_units' },
+      // { title: 'preparation_time_unit_type_id', data: 'preparation_time_unit_type.time_unit_text' },
+      {
+        title: 'Cooking Time', render: function (data, type, row, meta) { 
+          if (row.cooking_time_units == null || row.cooking_time_unit_type == undefined|| row.cooking_time_unit_type == null 
+            || row.cooking_time_unit_type.time_unit_text == undefined|| row.cooking_time_unit_type.time_unit_text ==null){
+            return 'Invalid';
+          }
+          else{
+            return row.cooking_time_units + ' ' + row.cooking_time_unit_type.time_unit_text 
+          }
+        }
+      },
+      // { title: 'cooking_time_units', data: 'cooking_time_units' },
+      // { title: 'cooking_time_unit_type_id', data: 'cooking_time_unit_type.time_unit_text' },
+      { title: 'Difficulty Level', data: 'difficulty_level.name' },
+      // { title: 'recipe_life_units', data: 'recipe_life_units' },
+      // { title: 'recipe_life_unit_type_id', data: 'recipe_life_unit_type_id' },
+        {
+          title: 'Recipe Life', render: function (data, type, row, meta) {
+            if (row.recipe_life_units == null || row.recipe_life_unit_type == undefined || row.recipe_life_unit_type == null
+              || row.recipe_life_unit_type.time_unit_text == undefined || row.recipe_life_unit_type.time_unit_text == null) {
+              return 'Invalid';
+            }
+            else {
+              return row.recipe_life_units + ' ' + row.recipe_life_unit_type.time_unit_text
+            }
+          }
+        },
+      { title: 'Servings per Recipe', data: 'servings_per_recipe' },
+      { title: 'People fed per serving', data: 'people_fed_per_serving' },
+      { title: 'Cals per serving', data: 'cals_per_serving' },
+      { title: 'Total cals per recipe', data: 'total_cals_per_recipe' },
+      { title: 'Perishable', render: function (data, type, row, meta) {return row.perishable ===1?'Yes':'No'; }},
+      { title: 'Refrigerate', render: function (data, type, row, meta) {return row.refrigerate ===1?'Yes':'No'; }},
+      { title: 'Expiration Date', data: 'expiration_date' },
+      { title: 'Contains Allergens', render: function (data, type, row, meta) {return row.allergen ===1?'Yes':'No'; }},
+      { title: 'Tags', data: 'tags' },
+      { title: 'Comments', data: 'comments' },
       { title: 'image_id', data: 'image_id' }     
     ]
       ,  dom: 'Bfrtip'
