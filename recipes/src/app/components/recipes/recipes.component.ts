@@ -108,7 +108,7 @@ export class RecipesComponent implements OnInit {
       { title: 'Contains Allergens', render: function (data, type, row, meta) {return row.allergen ===1?'Yes':'No'; }},
       { title: 'Tags', data: 'tags' },
       { title: 'Comments', data: 'comments' },
-      { title: 'image_id', data: 'image_id' }     
+      { title: 'Image', data: 'image_id' }     
     ]
       ,  dom: 'Bfrtip'
     };
